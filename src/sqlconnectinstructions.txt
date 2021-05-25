@@ -1,0 +1,7 @@
+//for connecting it in vscode add the .jar file(the one stored in prog files(86)/mysql/jconnector)
+to the referenced libraries.
+for working in the commandline add the same ar file in the same folder where other .java files are written
+which connect to the mysql.
+
+in eclipse right click on project => build path => configure path => click onmodule => 
+add external jar file => select the same jar file as above.
