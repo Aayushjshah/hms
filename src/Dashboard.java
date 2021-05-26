@@ -38,6 +38,7 @@ public class Dashboard extends JFrame implements ActionListener{
 
             i4 = new JMenuItem("Add Rooms");
             i4.setFont(menuItem);
+            i4.addActionListener(this);
             m2.add(i4);
 
             ImageIcon ii1 = new ImageIcon(ClassLoader.getSystemResource("icons/third.jpg"));
@@ -62,6 +63,9 @@ public class Dashboard extends JFrame implements ActionListener{
         public void actionPerformed(ActionEvent ae){
             if(ae.getSource()== i2){
                 new AddEmployee().setVisible(true);
+            }
+            if(ae.getSource() == i4){
+                new AddRoom().setVisible(true);
             }
         }
 

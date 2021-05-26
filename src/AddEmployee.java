@@ -1,5 +1,5 @@
 import javax.swing.*;
-import java.sql.*;
+// import java.sql.*;
 import java.awt.Color;
 import java.awt.Font;   //abstract window toolkit
 import java.awt.Image;
@@ -9,7 +9,7 @@ public class AddEmployee extends JFrame implements ActionListener{
     JLabel[] arr = {aadhar ,phone ,email};
     JTextField t1,t2,t3,t4,t5,t6;
     JRadioButton r1,r2;
-    JComboBox c1;
+    JComboBox<String> c1;
     JButton b1;
 
     Font forLabel = new Font("Tahoma" , Font.PLAIN , 17);
