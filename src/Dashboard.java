@@ -33,6 +33,7 @@ public class Dashboard extends JFrame implements ActionListener{
             m2.add(i2);
 
             i3 = new JMenuItem("Add Drivers");
+            i3.addActionListener(this);
             i3.setFont(menuItem);
             m2.add(i3);
 
@@ -66,6 +67,9 @@ public class Dashboard extends JFrame implements ActionListener{
             }
             if(ae.getSource() == i4){
                 new AddRoom().setVisible(true);
+            }
+            if(ae.getSource() ==i3){
+                new AddDriver().setVisible(true);
             }
         }
 
