@@ -25,6 +25,7 @@ public class Dashboard extends JFrame implements ActionListener{
 
             i1 =new JMenuItem("Reception");
             i1.setFont(menuItem);
+            i1.addActionListener(this);
             m1.add(i1);
 
             i2 = new JMenuItem("Add Employee");
@@ -62,6 +63,9 @@ public class Dashboard extends JFrame implements ActionListener{
             setLayout(null);
         }
         public void actionPerformed(ActionEvent ae){
+            if(ae.getSource() == i1){
+                new Reception().setVisible(true);
+            }
             if(ae.getSource()== i2){
                 new AddEmployee().setVisible(true);
             }
