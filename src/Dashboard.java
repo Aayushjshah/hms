@@ -1,7 +1,8 @@
 import javax.swing.*;
 import java.awt.Font;
 import java.awt.Color;
-public class Dashboard extends JFrame{
+import java.awt.event.*;
+public class Dashboard extends JFrame implements ActionListener{
     JMenuBar mb1;
     JMenu m1,m2;
     JMenuItem i1,i2,i3,i4;
@@ -28,6 +29,7 @@ public class Dashboard extends JFrame{
 
             i2 = new JMenuItem("Add Employee");
             i2.setFont(menuItem);
+            i2.addActionListener(this);
             m2.add(i2);
 
             i3 = new JMenuItem("Add Drivers");
@@ -38,8 +40,8 @@ public class Dashboard extends JFrame{
             i4.setFont(menuItem);
             m2.add(i4);
 
-            ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/third.jpg"));
-            JLabel l1 = new JLabel(i1);
+            ImageIcon ii1 = new ImageIcon(ClassLoader.getSystemResource("icons/third.jpg"));
+            JLabel l1 = new JLabel(ii1);
             l1.setBounds(0,0,1700,830);
             add(l1);
             // l1.setBounds(50,20,100,30);
@@ -56,6 +58,11 @@ public class Dashboard extends JFrame{
             setBounds(0,0,1700,830);
             setVisible(true);
             setLayout(null);
+        }
+        public void actionPerformed(ActionEvent ae){
+            if(ae.getSource()== i2){
+                new AddEmployee().setVisible(true);
+            }
         }
 
 
