@@ -38,26 +38,31 @@ public class AddEmployee extends JFrame implements ActionListener{
 
         gender = new JLabel("Gender:");
         gender.setFont(forLabel);
-        gender.setBounds(60, 130,120,27);
+        gender.setBounds(60,130,120,27);
         add(gender);
         job = new JLabel("Job");
         job.setFont(forLabel);
-        job.setBounds(60 ,180,120,27);
+        job.setBounds(60 ,230,120,27);
         add(job);
+
+        salary = new JLabel("Salary:");
+        salary.setBounds(60,180,120,27);
+        salary.setFont(forLabel);
+        add(salary);
 
         String[] jobs = {"Front Desk Clerks","Porters","Housekeeping","Kitchen Staff",
         "Room Service","Waiter/Waitress","Manager","Accountant","Chef"};
         c1 = new JComboBox<String>(jobs);
-        c1.setBounds(200,180,150,27);
+        c1.setBounds(200,230,150,27);
         c1.setFont(forLabel);
         c1.setForeground(Color.MAGENTA);
         c1.setBackground(Color.WHITE);
         add(c1);
 
-        // t3 = new JTextField();
-        // t3.setBounds(200, 180, 150 , 27);
-        // add(t3);
-        int x =180;
+        t3 = new JTextField();
+        t3.setBounds(200, 180, 150 , 27);
+        add(t3);
+        int x =230;
         
         for(int i=0 ; i<arr.length;i++){
             arr[i] = new JLabel("aa");
@@ -72,15 +77,15 @@ public class AddEmployee extends JFrame implements ActionListener{
 
         t4 = new JTextField();
         t4.setFont(forLabel);
-        t4.setBounds(200,230,150,27);
+        t4.setBounds(200,280,150,27);
         add(t4);
         t5 = new JTextField();
         t5.setFont(forLabel);
-        t5.setBounds(200,280,150,27);
+        t5.setBounds(200,330,150,27);
         add(t5);
         t6 = new JTextField();
         t6.setFont(forLabel);
-        t6.setBounds(200,330,150,27);
+        t6.setBounds(200,380,150,27);
         add(t6);
 
         //Radio button 
@@ -114,7 +119,7 @@ public class AddEmployee extends JFrame implements ActionListener{
         b1.setBackground(Color.BLACK);
         b1.setFont(new Font("Serif" , Font.BOLD , 22));
         b1.addActionListener(this);
-        b1.setBounds(200,380,150,30);
+        b1.setBounds(200,430,150,30);
         add(b1);
 
         setBounds(370,200,900,520);
@@ -129,7 +134,8 @@ public class AddEmployee extends JFrame implements ActionListener{
             String aadharf = t4.getText();
             String phonef = t5.getText();
             String emailf = t6.getText();
-            
+            String salary = t3.getText();
+            int sal = Integer.parseInt(salary);
             String genderf = null;
             if(r1.isSelected()){
                 genderf = "Male";
@@ -140,7 +146,7 @@ public class AddEmployee extends JFrame implements ActionListener{
             String jobf = c1.getSelectedItem().toString();
             
             conn n1 = new conn();
-            String query = "insert into employee values('" + namef + "','" + agef + "','" + genderf + "','" +
+            String query = "insert into employee values('" + namef + "','" + agef + "','" + genderf + "'," + sal + ",'"+
             jobf + "','" +aadharf + "','" +phonef + "','" +emailf + "')";
             try{
             //  n1.s.executeQuery(query);  //execute query to fetch data from db.
