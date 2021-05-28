@@ -61,6 +61,7 @@ public class Dashboard extends JFrame implements ActionListener{
             setBounds(0,0,1700,830);
             setVisible(true);
             setLayout(null);
+            setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         }
         public void actionPerformed(ActionEvent ae){
             if(ae.getSource() == i1){

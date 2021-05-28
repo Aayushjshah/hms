@@ -41,6 +41,7 @@ public class App extends JFrame implements ActionListener{
 //stick to end
         setLayout(null);
         setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     //adding blinking
         while(true){
             j2.setVisible(false);

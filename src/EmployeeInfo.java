@@ -1,4 +1,6 @@
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.*;
@@ -10,6 +12,7 @@ public class EmployeeInfo extends JFrame implements ActionListener{
 
     String[] arr = {"Name", "Age" , "Gender" , "Salary","Job" , "AadharNO.","PhoneNO.","Email"};
     EmployeeInfo(){
+        
         
         t1 = new JTable();
         t1.setFont(new Font("Tahoma" , Font.PLAIN , 15));
@@ -59,6 +62,8 @@ public class EmployeeInfo extends JFrame implements ActionListener{
                 String query = "select * from employee";
                 ResultSet rs =c.s.executeQuery(query);
                 t1.setModel(DbUtils.resultSetToTableModel(rs)); //used to convert returned answers from database into table format
+              
+
                 //part of rs2xml.jar file from net.proteanit.sql.*
 
 

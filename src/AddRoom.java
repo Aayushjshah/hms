@@ -100,6 +100,7 @@ public class AddRoom extends JFrame implements ActionListener{
         setLayout(null); 
         setVisible(true);
         getContentPane().setBackground(Color.WHITE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // JPanel contentPane = new JPanel();
         // setContentPane(contentPane);
         // contentPane.setLayout(null);

@@ -40,6 +40,7 @@ public class Reception extends JFrame implements ActionListener{
         setBounds(530,200,850,570);
         setLayout(null);
         setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         getContentPane().setBackground(Color.WHITE);
     }
 
@@ -48,6 +49,9 @@ public class Reception extends JFrame implements ActionListener{
         if(ref == arr[0]){
             
         }else if( ref == arr[1]){
+            //room display
+            this.setVisible(false);
+            new RoomDisplay();
 
         }else if( ref == arr[2]){
             

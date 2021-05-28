@@ -17,6 +17,7 @@ public class login extends JFrame implements ActionListener{
         //variable declarations abv constructoirs are public!
         setBounds(400,200,600,300);
         getContentPane().setBackground(Color.WHITE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
         setVisible(true);
 
