@@ -47,7 +47,9 @@ public class Reception extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent ae){
         JButton ref = (JButton)ae.getSource();
         if(ref == arr[0]){
-            
+            //customer
+            this.setVisible(false);
+            new AddCustomer();
         }else if( ref == arr[1]){
             //room display
             this.setVisible(false);
