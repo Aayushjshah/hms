@@ -61,7 +61,7 @@ public class AddCustomer extends JFrame implements ActionListener{
 
                 
                 ArrayList<Integer> roomL = new ArrayList<Integer>();
-                String query = "Select roomNo from room";
+                String query = "Select roomNo from room where available='Available'";
                 
                 cl =new Choice();
                 try{
@@ -171,8 +171,17 @@ public class AddCustomer extends JFrame implements ActionListener{
                 // System.out.println(query);
                 c.s.executeUpdate(query);
                 
+                String q2 = "update room set available='Occupied' where roomNO='"+iid[5]+"'";
+                // System.out.println(q2);
+                conn cs2 = new conn();
+                try{
+                    cs2.s.executeUpdate(q2);
+                }catch(Exception e){
+                    e.printStackTrace();                }
+
                 JOptionPane.showMessageDialog(null,"Customer added sucessfully");
                 this.setVisible(false);
+                new Reception().setVisible(true);
             }catch(Exception e){e.printStackTrace();}
 
 

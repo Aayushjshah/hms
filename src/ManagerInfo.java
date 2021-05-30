@@ -42,7 +42,7 @@ public class ManagerInfo extends JFrame implements ActionListener{
    //main Pane   
         setBounds(300,170,1000,650);
         getContentPane().setBackground(Color.WHITE);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
         setVisible(true);
     }

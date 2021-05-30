@@ -74,13 +74,14 @@ public class CheckInDetails extends JFrame implements ActionListener{
         b2.setBounds(50,x,150,30);
         b2.setForeground(Color.WHITE);
         b2.setBackground(Color.BLACK);
+        b2.setEnabled(false);
         b2.addActionListener(this);
         add(b2);
         b3 = new JButton("Back");
         b3.setBounds(220,x,150,30);
         b3.setForeground(Color.WHITE);
         b3.setBackground(Color.BLACK);
-        b3.setEnabled(false);
+        
         b3.addActionListener(this);
         add(b3);
 
@@ -95,7 +96,7 @@ public class CheckInDetails extends JFrame implements ActionListener{
         //main pane
         setBounds(280,170,900,550);
         setLayout(null);
-        getContentPane().setBackground(Color.WHITE);
+        // getContentPane().setBackground(Color.WHITE);
         setVisible(true);
     }
 
@@ -134,7 +135,7 @@ public class CheckInDetails extends JFrame implements ActionListener{
             }
 
 
-            b3.setEnabled(true);
+            b2.setEnabled(true);
         }else if( temp == b2){
             //update
             String updateQuery = "update customer set roomNo='"+tarr[0].getText()
@@ -149,6 +150,10 @@ public class CheckInDetails extends JFrame implements ActionListener{
                 e.printStackTrace();
             }
 
+            for(int i=0;i<tarr.length;i++){
+                tarr[i].setText("");
+                b2.setEnabled(false);
+            }
         }else{
             //b3
             new Reception().setVisible(true);

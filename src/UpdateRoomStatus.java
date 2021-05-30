@@ -171,7 +171,8 @@ public class UpdateRoomStatus extends JFrame implements ActionListener{
                 e.printStackTrace();
             }
 
-
+            this.setVisible(false);
+            new UpdateRoomStatus().setVisible(true);
         }else{
             //b3
             this.setVisible(false);

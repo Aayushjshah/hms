@@ -36,7 +36,8 @@ public class login extends JFrame implements ActionListener{
 
         //textField
 
-        t1 = new JTextField("username");
+        // t1 = new JTextField("username");
+        t1 = new JTextField();
         t1.setBounds(127,54,150,26);
         t1.setFont(new Font("Tahoma" , Font.PLAIN , 20));
         add(t1);

@@ -131,7 +131,7 @@ public class CheckOut extends JFrame implements ActionListener{
                 }catch(Exception e){
                     e.printStackTrace();
                 }
-
+                System.exit(0);
             }else if(temp == b2){
                 //back
                 new Reception().setVisible(true);
