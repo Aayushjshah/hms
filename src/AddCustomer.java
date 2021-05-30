@@ -45,11 +45,13 @@ public class AddCustomer extends JFrame implements ActionListener{
             if(i==3){
                 r1 = new JRadioButton("Male");
                 r1.setBounds(180,y,75,30);
+                r1.setFont(forLabel);
                 r1.setBackground(Color.WHITE);
                 add(r1);
 
                 r2 = new JRadioButton("Female");
                 r2.setBackground(Color.WHITE);
+                r2.setFont(forLabel);
                 r2.setBounds(275,y,75,30);
                 add(r2);
                 y+=55;
@@ -57,7 +59,7 @@ public class AddCustomer extends JFrame implements ActionListener{
             }if(i==5){
 
 
-                Integer[] roomArr = {12,13,14,15,16,17};
+                
                 ArrayList<Integer> roomL = new ArrayList<Integer>();
                 String query = "Select roomNo from room";
                 
@@ -72,11 +74,6 @@ public class AddCustomer extends JFrame implements ActionListener{
                 }catch(Exception e){
                     e.printStackTrace();
                 }
-
-                
-                
-                
-                
 
                 // c2 = new JComboBox<Integer>((Integer[])roomL.toArray());
                 cl.setBounds(180,y,75,30);
@@ -173,16 +170,16 @@ public class AddCustomer extends JFrame implements ActionListener{
                 query+=iid[7]+"')";
                 // System.out.println(query);
                 c.s.executeUpdate(query);
-                this.setVisible(false);
+                
                 JOptionPane.showMessageDialog(null,"Customer added sucessfully");
-
+                this.setVisible(false);
             }catch(Exception e){e.printStackTrace();}
 
 
             
         }else{
             this.setVisible(false);
-            new Reception();
+            new Reception().setVisible(true);
         }
     }
     public static void main(String[] args){

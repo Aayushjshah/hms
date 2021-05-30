@@ -40,7 +40,7 @@ public class Reception extends JFrame implements ActionListener{
         setBounds(530,200,850,570);
         setLayout(null);
         setVisible(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         getContentPane().setBackground(Color.WHITE);
     }
 
@@ -49,11 +49,11 @@ public class Reception extends JFrame implements ActionListener{
         if(ref == arr[0]){
             //customer
             this.setVisible(false);
-            new AddCustomer();
+            new AddCustomer().setVisible(true);
         }else if( ref == arr[1]){
             //room display
             this.setVisible(false);
-            new RoomDisplay();
+            new RoomDisplay().setVisible(true);
 
         }else if( ref == arr[2]){
             
@@ -63,7 +63,9 @@ public class Reception extends JFrame implements ActionListener{
             new EmployeeInfo().setVisible(true);
 
         }else if( ref == arr[4]){
-            
+            //customer info
+            this.setVisible(false);
+            new CustomerDisp().setVisible(true);
         }else if( ref == arr[5]){
             //manager infor
             this.setVisible(false);
@@ -71,9 +73,13 @@ public class Reception extends JFrame implements ActionListener{
         }else if( ref == arr[6]){
             
         }else if( ref == arr[7]){
-            
+            //check in status
+            this.setVisible(false);
+            new CheckInDetails().setVisible(true);
         }else if( ref == arr[8]){
-            
+            //update room status
+            this.setVisible(false);
+            new UpdateRoomStatus().setVisible(true);
         }else if( ref == arr[9]){
             
         }else if( ref == arr[10]){
