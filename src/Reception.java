@@ -71,7 +71,8 @@ public class Reception extends JFrame implements ActionListener{
             this.setVisible(false);
             new ManagerInfo().setVisible(true);
         }else if( ref == arr[6]){
-            
+            this.setVisible(false);
+            new CheckOut().setVisible(true);
         }else if( ref == arr[7]){
             //check in status
             this.setVisible(false);
@@ -81,9 +82,11 @@ public class Reception extends JFrame implements ActionListener{
             this.setVisible(false);
             new UpdateRoomStatus().setVisible(true);
         }else if( ref == arr[9]){
-            
+            new PickUp().setVisible(true);
+            this.setVisible(false);
         }else if( ref == arr[10]){
-            
+            this.setVisible(false);
+            new SearchRoom().setVisible(true);
         }else if( ref == arr[11]){
             System.exit(0);
         }

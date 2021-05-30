@@ -56,9 +56,9 @@ public class RoomDisplay  extends JFrame implements ActionListener{
                 ResultSet rs = c.s.executeQuery(sql);
                 // t1.setModel(DbUtils.resultSetToTableModel(rs));
                dtm.addRow(initHeading);
-               
+               String[] addRow = new String[5];
                 while(rs.next()){
-                    String[] addRow = new String[5];
+                    
                     // System.out.println(rs.getInt(1));
                     addRow[0]=Integer.toString(rs.getInt(1));
                     addRow[1]=rs.getString(2);

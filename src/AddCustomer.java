@@ -137,7 +137,7 @@ public class AddCustomer extends JFrame implements ActionListener{
 
     public void actionPerformed(ActionEvent ae){
         if(ae.getSource() == b1){
-           
+           //set room as occupied
             String[] iid =new String[8];
             iid[0]=c1.getSelectedItem().toString();
             iid[1]=tfArr[0].getText();
